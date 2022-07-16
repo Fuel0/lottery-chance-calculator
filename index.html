@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
 <head>
     <title>Lottery Chance Calculator</title>
-    <meta name="description" content="Page to count your chances on lottery, according to total tickets, number of winning tickets and number of purchased tickets.">
-    <meta name="keywords" content="calculate chances lottery, lottery calculate chances, chances calculate, chance percentage, chance lottery, app, launchpad, lottery">
+    <meta name="description" content="Website to calculate your chances on lottery, according to total tickets, number of winning tickets and your tickets purchased. Try it !">
+    <meta name="keywords" content="calculate chances lottery, lottery calculate chances, chance calculator, odds, odds lottery, chance percentage, chance lottery, app, launchpad, lottery, math, probability, probabilities">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, archive">
     <link rel="canonical" href="https://chance-calculator.com">
@@ -62,7 +62,7 @@
         color: rgb(173 198 255);
         margin-bottom: 25px;
         margin-top: 0;
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         font-weight: normal;
         text-align: center;
     }
@@ -123,14 +123,14 @@
     }
 
     #result {
+        transition: all 0.4s;
         margin-top: 10px;
         display: block;
     }
 
     @media only screen and (max-width: 600px) {
         body {
-            display: flex;
-            justify-content: center;
+            display: block;
             padding: 20px;
         }
         #content {margin: 0; justify-content: start;}
@@ -142,7 +142,19 @@
 
     .github-link {
         color: white;
+        margin-bottom: 15px;
+    }
+
+    .copyright {
+        text-align: center;
+        color: white;
+        font-size: 0.65rem;
         margin-bottom: 20px;
+    }
+
+    .copyright a {
+        color: white;
+        text-decoration: none;
     }
 
 </style>
@@ -152,22 +164,25 @@
     <main>
         <h1>Lottery Chance Calculator</h1>
 
-        <h2>Calculate your chances for the next <b>launchpad</b>.</h2>
+        <h2>Calculate your odds for the next <b>lottery</b>.</h2>
 
         <form action="" id="myForm">
-            <label for="nbTickets">Total amount of tickets : </label>
+            <label for="nbTickets">Total number of tickets : </label>
             <input type="text" id="nbTickets" name="nbTickets" value="300,000"><br><br>
 
-            <label for="winningTickets">Amount of winning tickets :</label>
+            <label for="winningTickets">Number of winning tickets :</label>
             <input type="text" id="winningTickets" name="winningTickets" value="30,000"><br><br>
 
-            <label for="nbTicketsBought">Amount of pruchased tickets :</label>
+            <label for="nbTicketsBought">Number of tickets purchased :</label>
             <input type="text" id="nbTicketsBought" name="nbTicketsBought" value="10"><br><br>
 
             <input type="submit" value="Calculate" class="submit">
         </form>
 
-        <div id="result-chances">Chances :<br> <span id="result">~</span></div>
+        <div id="result-chances">Chances :
+            <br>
+            <span id="result">~</span>
+        </div>
     </main>
 
     <a class="github-link"
@@ -180,6 +195,8 @@
             <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
         </svg>
     </a>
+
+    <div class="copyright">©2022 <a href="https://chance-calculator.com" title="chance-calculator.com">chance-calculator.com</a>. All right reserved.</div>
 
 </div>
 </body>
