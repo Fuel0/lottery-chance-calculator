@@ -227,8 +227,13 @@
     }
 
     let result = (1 - total) * 100;
-    result = Math.round(result * 100) / 100;
-    document.getElementById("result").innerHTML = result + '%';
+    result = (result * 100) / 100;
+
+    if (result < 0.01) {
+         document.getElementById("result").innerHTML = result.toFixed(4) + '%';
+    } else {
+         document.getElementById("result").innerHTML = result.toFixed(2) + '%';
+    }
   }
 
 </script>
