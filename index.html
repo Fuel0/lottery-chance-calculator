@@ -9,11 +9,26 @@
     <meta name="robots" content="index, archive">
     <link rel="canonical" href="https://chance-calculator.com">
 
+    <!-- Open Graph Metadata (for social media previews) -->
+    <meta property="og:title" content="Raffle Chance Calculator">
+    <meta property="og:description" content="Calculate your chances on raffle, according to total tickets, number of winning tickets and your tickets purchased.">
+    <meta property="og:image" content="https://chance-calculator.com/favicon/android-chrome-192x192.png"> <!-- Replace with actual image URL -->
+    <meta property="og:url" content="https://chance-calculator.com/random-number-generator.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Metadata (for Twitter previews) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Raffle Chance Calculator">
+    <meta name="twitter:description" content="Calculate your chances on raffle, according to total tickets, number of winning tickets and your tickets purchased.">
+    <meta name="twitter:image" content="https://chance-calculator.com/favicon/android-chrome-192x192.png">
+
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#1b1659"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <style>
@@ -22,84 +37,27 @@
         font-family: "Arial", sans-serif;
     }
 
-    html {background-color: #1b1659;}
+    html {background-image: linear-gradient(#131a35, #1b1659);}
     body {background-image: linear-gradient(#131a35, #1b1659);}
 
-    body, html {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        margin: 0;
-    }
-
-    #content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 20vh 0 0 0;
-    }
-
     main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 1rem;
-        padding: 20px 40px;
         background-image: linear-gradient(140.14deg,rgba(0,182,191,.15),rgba(27,22,89,.1) 86.61%),linear-gradient(321.82deg,#18134d,#1b1659);
         border: 1px solid #32488d;
-        margin-bottom: 20px;
-        max-width: 530px;
-        width: 100%;
     }
 
-    h1 {
-        color: white;
-        margin-bottom: 10px;
-        font-size: 2.2rem;
-        text-align: center;
-    }
     h2 {
         color: rgb(173 198 255);
-        margin-bottom: 25px;
-        margin-top: 0;
-        font-size: 1.15rem;
-        font-weight: normal;
-        text-align: center;
     }
-
-    form {text-align: center;}
 
     label {
-        display: block;
-        color: rgb(117 171 221);
-        margin-bottom: 0.6rem;
+        color: #75ABDDFF;
     }
 
-    input {
-        background-color: rgb(20 16 65);
-        border: none;
-        border-radius: 0.8rem;
-        height: 50px;
-        max-width: 300px;
-        width: 100%;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        transition: all 0.4s;
-        box-shadow: 0 0 10px transparent;
-    }
-
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus,
-    input:-webkit-autofill:active {
-        transition: background-color 5000s ease-in-out 0s;
-        -webkit-text-fill-color: white!important;
+    input[type=text] {
+        background-color: #141041FF;
     }
 
     input:focus {
-        outline: none !important;
         border:1px solid #215072;
         box-shadow: 0 0 10px #0f3554;
     }
@@ -107,99 +65,80 @@
     .submit {
         color: #3bd0d8;
         background-color: #1e2f6f;
-        transition: all 0.4s;
     }
 
     .submit:hover {
-        cursor: pointer;
         background-color: #243479;
         color: white;
     }
 
-    #result-chances {
-        transition: all 0.4s;
-        margin: 20px;
-        color: white;
-        text-align: center;
+    nav .link {
+        color: #243479;
     }
 
-    #result {
-        transition: all 0.4s;
-        margin-top: 10px;
-        display: block;
+    nav .active {
+        color: #75ABDDFF;
     }
 
-    @media only screen and (max-width: 600px) {
-        body {
-            display: block;
-            padding: 20px;
-        }
-        #content {margin: 0; justify-content: start;}
-        main {padding: 20px 20px;}
-        h1 {font-size: 20px;}
-        h2 {font-size: 0.9rem;}
-        label {font-size: 0.8rem;}
+    nav .link:hover {
+        color: #75ABDDFF;
+        background-color: rgba(20, 16, 58, 0.93);
     }
-
-    .github-link {
-        color: white;
-        margin-bottom: 15px;
-    }
-
-    .copyright {
-        text-align: center;
-        color: white;
-        font-size: 0.65rem;
-        margin-bottom: 20px;
-    }
-
-    .copyright a {
-        color: white;
-        text-decoration: none;
-    }
-
 </style>
 
 <body>
-<div id="content">
-    <main>
-        <h1>Raffle Chance Calculator</h1>
+<div id="container">
+    <nav>
+        <a href="index.html" title="Chance Calculator"><img src="./favicon/android-chrome-192x192.png" title="Chance Calculator" id="logo"  alt="Chance Calculator"/> </a>
+        <a href="index.html" class="link active" title="Chance Calculator">Chance Calculator</a>
+        <a href="random-number-generator.html" class="link" title="Random Number Generator">Random Number</a>
+    </nav>
+    <div id="content">
+        <main>
+            <h1>Raffle Chance Calculator</h1>
 
-        <h2>Calculate your odds for the next <b>Raffle</b>.</h2>
+            <h2>Calculate your odds for the next <b>Raffle</b>.</h2>
 
-        <form action="" id="myForm">
-            <label for="nbTickets">Total number of tickets : </label>
-            <input type="text" id="nbTickets" name="nbTickets" value="100,000"><br><br>
+            <form action="" id="myForm">
+                <label for="nbTickets">Total number of tickets : </label>
+                <input type="text" id="nbTickets" name="nbTickets" value="100,000"><br><br>
 
-            <label for="winningTickets">Number of winning tickets :</label>
-            <input type="text" id="winningTickets" name="winningTickets" value="1"><br><br>
+                <label for="winningTickets">Number of winning tickets :</label>
+                <input type="text" id="winningTickets" name="winningTickets" value="1"><br><br>
 
-            <label for="nbTicketsBought">Number of tickets purchased :</label>
-            <input type="text" id="nbTicketsBought" name="nbTicketsBought" value="10"><br><br>
+                <label for="nbTicketsBought">Number of tickets purchased :</label>
+                <input type="text" id="nbTicketsBought" name="nbTicketsBought" value="10"><br><br>
 
-            <input type="submit" value="Calculate" class="submit">
-        </form>
+                <input type="submit" value="Calculate" class="submit">
+            </form>
 
-        <div id="result-chances">Chances :
-            <br>
-            <span id="result">~</span>
+            <div id="result-chances">Chances :
+                <br>
+                <span id="result">~</span>
+            </div>
+        </main>
+
+        <div class="copyright">
+            <a class="github-link"
+               href="https://github.com/Fuel0/lottery-chance-calculator"
+               target="_blank"
+               title="Github Guilhemfuel"
+               data-hotkey="g d"
+               aria-label="Homepage">
+                <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle" fill="white">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+
+            <div class="copyright-text">©<span id="year">2024</span> <a href="https://chance-calculator.com" title="chance-calculator.com">chance-calculator.com</a>. All right reserved.</div>
         </div>
-    </main>
-
-    <a class="github-link"
-       href="https://github.com/Fuel0/lottery-chance-calculator"
-       target="_blank"
-       title="Github Guilhemfuel"
-       data-hotkey="g d"
-       aria-label="Homepage">
-        <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle" fill="white">
-            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-        </svg>
-    </a>
-
-    <div class="copyright">©<span id="year">2024</span> <a href="https://chance-calculator.com" title="chance-calculator.com">chance-calculator.com</a>. All right reserved.</div>
-
+    </div>
+    <div id="bottom-menu">
+        <a href="index.html" class="link active" title="Chance Calculator">Chance Calculator</a>
+        <a href="random-number-generator.html" class="link" title="Random Number Generator">Random Number</a>
+    </div>
 </div>
+
 </body>
 
 <script>

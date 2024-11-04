@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="en" dir="ltr">
+<head>
+    <title>Raffle Chance Calculator</title>
+    <meta name="description" content="Generate truly random numbers with cryptographic safety. Customize your range and choose whether to allow repeats for secure and flexible random number generation.">
+    <meta name="keywords" content="random, number, random number generator, secure random number, cryptographic random number, allow repeats, no repeats, lottery calculator, chance calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, archive">
+    <link rel="canonical" href="https://chance-calculator.com">
+
+    <!-- Open Graph Metadata (for social media previews) -->
+    <meta property="og:title" content="Secure Random Number Generator">
+    <meta property="og:description" content="Generate truly random numbers with cryptographic safety. Choose your range and whether to allow repeats for versatile and secure randomization.">
+    <meta property="og:image" content="https://chance-calculator.com/favicon/android-chrome-192x192.png"> <!-- Replace with actual image URL -->
+    <meta property="og:url" content="https://chance-calculator.com/random-number-generator.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Metadata (for Twitter previews) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Secure Random Number Generator">
+    <meta name="twitter:description" content="Generate secure and truly random numbers within your chosen range, with or without repeats. Perfect for lottery or raffle calculations.">
+    <meta name="twitter:image" content="https://chance-calculator.com/favicon/android-chrome-192x192.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#1b1659"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<style>
+    html {background-image: linear-gradient(#2e003e, #4b0082);}
+    body {background-image: linear-gradient(#2e003e, #4b0082);}
+
+    main {
+        background-image: linear-gradient(140.14deg, rgba(139, 0, 255, 0.15), rgba(75, 0, 130, 0.1) 86.61%), linear-gradient(321.82deg, #2e003e, #4b0082);
+        border: 1px solid #6a0dad;
+    }
+
+    h2 {
+        color: #cdadff;
+    }
+
+    label {
+        color: #cdadff;
+    }
+
+    input[type=text] {
+        background-color: #2e003e;
+    }
+
+    input[type=checkbox] {
+        accent-color: #9b59b6;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: white!important;
+    }
+
+    input:focus {
+        border:1px solid #9d37e1;
+        box-shadow: 0 0 10px #6b14a6;
+    }
+
+    .submit {
+        color: #d5abf3;
+        background-color: #6b14a6;
+    }
+
+    .submit:hover {
+        background-color: #7a16be;
+    }
+
+    nav .link {
+        color: #672a7e;
+    }
+
+    nav .active {
+        color: #ad5dcc;
+    }
+
+    nav .link:hover {
+        color: #ad5dcc;
+        background-color: rgba(93, 9, 108, 0.71);
+    }
+
+</style>
+
+<body>
+
+<div id="container">
+    <nav>
+        <a href="index.html" title="Chance Calculator"><img src="./favicon/android-chrome-192x192.png" title="Chance Calculator" id="logo"  alt="Chance Calculator"/> </a>
+        <a href="index.html" class="link" title="Chance Calculator">Chance Calculator</a>
+        <a href="random-number-generator.html" class="link active" title="Random Number Generator">Random Number</a>
+    </nav>
+
+    <div id="content">
+        <main>
+            <h1>Random Number Generator</h1>
+
+            <h2>Use this random generator to get a truly random <b>Number</b>.</h2>
+
+            <form action="" id="myForm">
+                <label for="from">From : </label>
+                <input type="text" id="from" name="from" value="1"><br><br>
+
+                <label for="to">To :</label>
+                <input type="text" id="to" name="to" value="1000"><br><br>
+
+                <label for="total">How many numbers :</label>
+                <input type="text" id="total" name="total" value="10"><br><br>
+
+                <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+                    <label for="allowRepeats">Allow repeats :</label>
+                    <input type="checkbox" id="allowRepeats" name="allowRepeats" checked><br><br>
+                </div>
+
+                <input type="submit" value="Generate" class="submit">
+            </form>
+
+            <div id="result-chances">Numbers :
+                <br>
+                <span id="result">~</span>
+            </div>
+        </main>
+
+        <div class="copyright">
+            <a class="github-link"
+               href="https://github.com/Fuel0/lottery-chance-calculator"
+               target="_blank"
+               title="Github Guilhemfuel"
+               data-hotkey="g d"
+               aria-label="Homepage">
+                <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle" fill="white">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+
+            <div class="copyright-text">©<span id="year">2024</span> <a href="https://chance-calculator.com" title="chance-calculator.com">chance-calculator.com</a>. All right reserved.</div>
+        </div>
+
+    </div>
+    <div id="bottom-menu">
+        <a href="index.html" class="link" title="Chance Calculator">Chance Calculator</a>
+        <a href="random-number-generator.html" class="link active" title="Random Number Generator">Random Number</a>
+    </div>
+</div>
+
+</body>
+
+<script>
+
+  const currentYear = new Date().getFullYear();
+  // Display the year in the HTML element with id "year"
+  document.getElementById("year").textContent = currentYear;
+
+  //1 - 190/200 x 189/199...
+
+  document.querySelector("#myForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    generate();
+  });
+
+  function removeSpaceAndComma(data) {
+    return parseInt(data.replace(/\s/g, '').replace(/,/g, ''));
+  }
+
+  function generate() {
+    var from = removeSpaceAndComma(document.getElementById("from").value) ?? 0;
+    var to = removeSpaceAndComma(document.getElementById("to").value) ?? 1000;
+    var total = removeSpaceAndComma(document.getElementById("total").value) ?? 1;
+    const allowRepeats = document.getElementById("allowRepeats").checked;
+
+    if (from >= to) {
+      var swapFrom = from
+      from = to
+      to = swapFrom
+    }
+
+    const randomNumbers = allowRepeats ? [] : new Set();
+
+    while (allowRepeats ? randomNumbers.length < total : randomNumbers.size < total) {
+      const randomNumber = generateCryptoRandom(from, to);
+      if (allowRepeats || !randomNumbers.has(randomNumber)) {
+        allowRepeats ? randomNumbers.push(randomNumber) : randomNumbers.add(randomNumber);
+      }
+
+      // Break if unique numbers exceed possible range
+      if (!allowRepeats && randomNumbers.size >= (to - from + 1)) {
+        break;
+      }
+    }
+
+    document.getElementById("result").textContent = Array.from(randomNumbers).join(", ");
+  }
+
+  function generateCryptoRandom(min, max) {
+    const range = max - min + 1;
+    const randomBuffer = new Uint32Array(1);
+    let randomNumber;
+
+    do {
+      crypto.getRandomValues(randomBuffer);
+      randomNumber = randomBuffer[0] & 0x7fffffff; // Mask for positive number
+    } while (randomNumber >= Math.floor(0x7fffffff / range) * range);
+
+    return min + (randomNumber % range);
+  }
+
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }, function(error) {
+        console.log('Service Worker registration failed:', error);
+      });
+    });
+  }
+</script>
+
+<script src="./service-worker.js"></script>
+
+</html>
