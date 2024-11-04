@@ -197,12 +197,17 @@
         </svg>
     </a>
 
-    <div class="copyright">©2022 <a href="https://chance-calculator.com" title="chance-calculator.com">chance-calculator.com</a>. All right reserved.</div>
+    <div class="copyright">©<span id="year">2024</span> <a href="https://chance-calculator.com" title="chance-calculator.com">chance-calculator.com</a>. All right reserved.</div>
 
 </div>
 </body>
 
 <script>
+
+  const currentYear = new Date().getFullYear();
+  // Display the year in the HTML element with id "year"
+  document.getElementById("year").textContent = currentYear;
+
   //1 - 190/200 x 189/199...
 
   document.querySelector("#myForm").addEventListener("submit", function (e) {
