@@ -1,4 +1,4 @@
-const staticDevCoffee = "chance-calculator-v2"
+const staticDevCoffee = "chance-calculator-v3"
 
 const assets = [
   "/",
@@ -14,6 +14,19 @@ self.addEventListener("install", installEvent => {
     })
   )
 })
+
+// Activate event - Delete old caches
+self.addEventListener("activate", activateEvent => {
+  activateEvent.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames
+          .filter(cacheName => cacheName !== staticDevCoffee)
+          .map(cacheName => caches.delete(cacheName))
+      );
+    })
+  );
+});
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
