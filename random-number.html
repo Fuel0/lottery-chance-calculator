@@ -13,7 +13,7 @@
     <meta property="og:title" content="Secure Random Number Generator">
     <meta property="og:description" content="Generate truly random numbers with cryptographic safety. Choose your range and whether to allow repeats for versatile and secure randomization.">
     <meta property="og:image" content="https://chance-calculator.com/favicon/android-chrome-192x192.png"> <!-- Replace with actual image URL -->
-    <meta property="og:url" content="https://chance-calculator.com/random-number-generator.html">
+    <meta property="og:url" content="https://chance-calculator.com/random-number.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Metadata (for Twitter previews) -->
@@ -32,7 +32,7 @@
 </head>
 
 <style>
-    html {background-image: linear-gradient(#2e003e, #4b0082);}
+    html {background-color: #4b0082;}
     body {background-image: linear-gradient(#2e003e, #4b0082);}
 
     main {
@@ -78,17 +78,21 @@
         background-color: #7a16be;
     }
 
-    nav .link {
+    nav .link, #bottom-menu .link {
         color: #672a7e;
     }
 
-    nav .active {
+    nav .active, #bottom-menu .active {
         color: #ad5dcc;
     }
 
     nav .link:hover {
         color: #ad5dcc;
         background-color: rgba(93, 9, 108, 0.71);
+    }
+
+    #bottom-menu {
+        background-color: #2e0749;
     }
 
 </style>
@@ -99,7 +103,7 @@
     <nav>
         <a href="index.html" title="Chance Calculator"><img src="./favicon/android-chrome-192x192.png" title="Chance Calculator" id="logo"  alt="Chance Calculator"/> </a>
         <a href="index.html" class="link" title="Chance Calculator">Chance Calculator</a>
-        <a href="random-number-generator.html" class="link active" title="Random Number Generator">Random Number</a>
+        <a href="random-number.html" class="link active" title="Random Number Generator">Random Number</a>
     </nav>
 
     <div id="content">
@@ -148,12 +152,12 @@
         </div>
 
     </div>
-    <div id="bottom-menu">
-        <a href="index.html" class="link" title="Chance Calculator">Chance Calculator</a>
-        <a href="random-number-generator.html" class="link active" title="Random Number Generator">Random Number</a>
-    </div>
 </div>
 
+<div id="bottom-menu">
+    <a href="index.html" class="link" title="Chance Calculator">Chance Calculator</a>
+    <a href="random-number.html" class="link active" title="Random Number Generator">Random Number</a>
+</div>
 </body>
 
 <script>

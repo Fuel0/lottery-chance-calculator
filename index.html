@@ -13,7 +13,7 @@
     <meta property="og:title" content="Raffle Chance Calculator">
     <meta property="og:description" content="Calculate your chances on raffle, according to total tickets, number of winning tickets and your tickets purchased.">
     <meta property="og:image" content="https://chance-calculator.com/favicon/android-chrome-192x192.png"> <!-- Replace with actual image URL -->
-    <meta property="og:url" content="https://chance-calculator.com/random-number-generator.html">
+    <meta property="og:url" content="https://chance-calculator.com/random-number.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Metadata (for Twitter previews) -->
@@ -37,7 +37,7 @@
         font-family: "Arial", sans-serif;
     }
 
-    html {background-image: linear-gradient(#131a35, #1b1659);}
+    html {background-color: #1b1659;}
     body {background-image: linear-gradient(#131a35, #1b1659);}
 
     main {
@@ -72,11 +72,11 @@
         color: white;
     }
 
-    nav .link {
+    nav .link, #bottom-menu .link {
         color: #243479;
     }
 
-    nav .active {
+    nav .active, #bottom-menu .active {
         color: #75ABDDFF;
     }
 
@@ -84,6 +84,11 @@
         color: #75ABDDFF;
         background-color: rgba(20, 16, 58, 0.93);
     }
+
+    #bottom-menu {
+        background-color: #071835;
+    }
+
 </style>
 
 <body>
@@ -91,7 +96,7 @@
     <nav>
         <a href="index.html" title="Chance Calculator"><img src="./favicon/android-chrome-192x192.png" title="Chance Calculator" id="logo"  alt="Chance Calculator"/> </a>
         <a href="index.html" class="link active" title="Chance Calculator">Chance Calculator</a>
-        <a href="random-number-generator.html" class="link" title="Random Number Generator">Random Number</a>
+        <a href="random-number.html" class="link" title="Random Number Generator">Random Number</a>
     </nav>
     <div id="content">
         <main>
@@ -133,12 +138,11 @@
             <div class="copyright-text">©<span id="year">2024</span> <a href="https://chance-calculator.com" title="chance-calculator.com">chance-calculator.com</a>. All right reserved.</div>
         </div>
     </div>
-    <div id="bottom-menu">
-        <a href="index.html" class="link active" title="Chance Calculator">Chance Calculator</a>
-        <a href="random-number-generator.html" class="link" title="Random Number Generator">Random Number</a>
-    </div>
 </div>
-
+<div id="bottom-menu">
+    <a href="index.html" class="link active" title="Chance Calculator">Chance Calculator</a>
+    <a href="random-number.html" class="link" title="Random Number Generator">Random Number</a>
+</div>
 </body>
 
 <script>

@@ -7,6 +7,7 @@ body, html {
     height: 100%;
     width: 100%;
     margin: 0;
+    position: relative;
 }
 
 main {
@@ -135,6 +136,7 @@ nav {
     align-items: center;
     margin: 0;
     flex: 1;
+    padding-bottom: 20px;
 }
 
 nav .link {
@@ -160,7 +162,7 @@ nav .link {
 @media only screen and (max-width: 600px) {
     #content {
         display: block;
-        padding: 0 20px;
+        padding: 0 20px 60px 20px;
     }
     main {padding: 20px 20px;}
     h1 {font-size: 20px;}
@@ -177,7 +179,18 @@ nav .link {
         display: none;
     }
     #bottom-menu {
-        display: none;
-        background-color: #6a0dad;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #bottom-menu a {
+        text-decoration: none;
     }
 }

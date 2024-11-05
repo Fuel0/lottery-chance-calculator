@@ -1,8 +1,9 @@
-const staticDevCoffee = "chance-calculator-v1"
+const staticDevCoffee = "chance-calculator-v2"
 
 const assets = [
   "/",
   "./index.html",
+  "./random-number.html",
   "./favicon/favicon-32x32.png",
 ]
 
